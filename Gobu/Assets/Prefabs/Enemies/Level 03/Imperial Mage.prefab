@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7131689306798205827}
   - component: {fileID: 7131689306798205852}
   - component: {fileID: 7131689306798205853}
+  - component: {fileID: 1747028039}
   m_Layer: 7
   m_Name: Imperial Mage
   m_TagString: Boss
@@ -31,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 7131689306798205854}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 21.06, y: -0.01, z: 0}
-  m_LocalScale: {x: 4, y: 2.8184, z: 0}
+  m_LocalScale: {x: 1.6208115, y: 1.6208115, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7131689306915702884}
@@ -79,9 +80,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9c8b995fd3b6f7e40af3fd01dc985855, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 2}
@@ -104,7 +105,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 1.27, y: 2.44}
   m_Direction: 0
 --- !u!50 &7131689306798205826
 Rigidbody2D:
@@ -144,6 +145,7 @@ MonoBehaviour:
   armor: 35
   currentHealth: 0
   currentMana: 0
+  animation: {fileID: 1747028039}
 --- !u!114 &7131689306798205852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,6 +167,7 @@ MonoBehaviour:
   attackCD: 5
   attackDamage: 80
   speed: 1
+  animation: {fileID: 1747028039}
 --- !u!114 &7131689306798205853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,9 +184,28 @@ MonoBehaviour:
   targetLayers:
     serializedVersion: 2
     m_Bits: 6400
-  enemyArrowProjectile: {fileID: 0}
+  enemyArrowProjectile: {fileID: 6998829908287556217, guid: 1f68e732bcde5f045849effe62728a9f, type: 3}
   witch1: {fileID: 4914068727335578009, guid: 94a12a400f2ff294889dc60cbd19d62a, type: 3}
   witch2: {fileID: 9098004046903083912, guid: d4fdb3d36a6c35e418554e5e423fac68, type: 3}
+--- !u!95 &1747028039
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7131689306798205854}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6caa6cad5108ae6498d12a2cc0419e9c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7131689306915702885
 GameObject:
   m_ObjectHideFlags: 0

@@ -23,7 +23,7 @@ public class Ally : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            animator.SetFloat("Dead", 0);
+            animator.SetFloat("Dead", currentHealth);
             Die();
         }
     }

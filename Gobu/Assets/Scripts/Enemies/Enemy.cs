@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
 {
     public float maxHealth, armor;
     public float currentHealth;
-
+    [SerializeField] new Animator animation;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,8 +34,8 @@ public class Enemy : MonoBehaviour
     private void Die()
     {
         Debug.Log("Enemy dies");
-
-        Destroy(gameObject);
+        animation.SetFloat("Health", currentHealth);
+        Destroy(gameObject, 1f);
     }
 
     

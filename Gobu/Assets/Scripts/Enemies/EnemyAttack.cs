@@ -6,23 +6,31 @@ public class EnemyAttack : MonoBehaviour
 {
     [SerializeField] Transform attackPoint;
     [SerializeField] LayerMask enemyLayers;
+    [SerializeField] new Animator animation;
     public float attackRange, attackCD;
     public float attackDamage, speed;
     float attackTime;
     bool isAttackCD = false;
     Collider2D[] enemiesHit;
 
-
+    
 
     // Update is called once per frame
     void Update()
     {
         enemiesHit = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
-        if (enemiesHit.Length == 0)  transform.position += new Vector3((-1 * speed) * Time.deltaTime, 0,0);
+        animation.SetInteger("Attack", enemiesHit.Length);
+        if (enemiesHit.Length == 0)
+        {
+            transform.position += new Vector3((-1 * speed) * Time.deltaTime, 0, 0);
+            
+        }
         else if (enemiesHit.Length > 0 && !isAttackCD)
         {
+            
             attackTime = Time.time + attackCD;
             Attack(enemiesHit);
+            animation.SetInteger("Attack", enemiesHit.Length);
         }
         if (Time.time >= attackTime) isAttackCD = false;
     }

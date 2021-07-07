@@ -1,5 +1,6 @@
 { "cat":"", "pid":"bee_backend", "tid":0, "ts":0, "ph":"M", "name":"process_name", "args": { "name":"bee_backend" } }
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 ,{ "pid":"bee_backend", "tid":0, "ts":37469618686, "dur":3462, "ph":"X", "name": "DriverCheckDagSignatures",  "args": { "durationMS":3, "detail":"" }}
 ,{ "pid":"bee_backend", "tid":0, "ts":37469622148, "dur":1311, "ph":"X", "name": "DriverInitData",  "args": { "durationMS":1, "detail":"" }}
 ,{ "pid":"bee_backend", "tid":0, "ts":37469623618, "dur":648, "ph":"X", "name": "Tundra",  "args": { "durationMS":1, "detail":"RemoveStaleOutputs" }}
@@ -514,6 +515,8 @@
 ,{ "pid":"bee_backend", "tid":4, "ts":37471184258, "dur":37807, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "durationMS":38, "detail":"" }}
 ,{ "pid":"bee_backend", "tid":4, "ts":37471222065, "dur":25577, "ph":"X", "name": "Exiting",  "args": { "durationMS":26, "detail":"BuildLoop" }}
 =======
+=======
+>>>>>>> Stashed changes
 ,{ "pid":"bee_backend", "tid":0, "ts":6699383341, "dur":2326, "ph":"X", "name": "DriverCheckDagSignatures",  "args": { "durationMS":2, "detail":"" }}
 ,{ "pid":"bee_backend", "tid":0, "ts":6699385667, "dur":796, "ph":"X", "name": "DriverInitData",  "args": { "durationMS":1, "detail":"" }}
 ,{ "pid":"bee_backend", "tid":0, "ts":6699386580, "dur":543, "ph":"X", "name": "Tundra",  "args": { "durationMS":1, "detail":"RemoveStaleOutputs" }}
@@ -1036,5 +1039,8 @@
 ,{ "pid":"bee_backend", "tid":4, "ts":6700671455, "dur":545, "ph":"X", "name": "CopyFiles",  "args": { "durationMS":1, "detail":"Library/ScriptAssemblies/Assembly-CSharp.pdb" }}
 ,{ "pid":"bee_backend", "tid":4, "ts":6700672003, "dur":40690, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "durationMS":41, "detail":"" }}
 ,{ "pid":"bee_backend", "tid":4, "ts":6700712694, "dur":11213, "ph":"X", "name": "Exiting",  "args": { "durationMS":11, "detail":"BuildLoop" }}
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 ,

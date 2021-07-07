@@ -11,7 +11,7 @@ public class BossMeleeScript : MonoBehaviour
     float attackTime;
     bool isAttackCD = false;
     Collider2D[] enemiesHit;
-
+    [SerializeField] new Animator animation;
     Transform target;
     void Start()
     {
@@ -21,22 +21,24 @@ public class BossMeleeScript : MonoBehaviour
     void Update()
     {
         enemiesHit = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+        animation.SetInteger("Attack", enemiesHit.Length);
         if (target != null)
         {
             if (enemiesHit.Length == 0)
             {
                 if (transform.position.x < target.position.x)
                 {
-                    transform.localScale = new Vector3(-4f, 4f, 1f);
+                    transform.localScale = new Vector3(-2f, 2f, 1f);
                 }
                 else
                 {
-                    transform.localScale = new Vector3(4f, 4f, 1f);
+                    transform.localScale = new Vector3(2f, 2f, 1f);
                 }
                 transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
             }
             else if (enemiesHit.Length > 0 && !isAttackCD)
             {
+                animation.SetInteger("Attack", enemiesHit.Length);
                 attackTime = Time.time + attackCD;
                 Attack(enemiesHit);
             }

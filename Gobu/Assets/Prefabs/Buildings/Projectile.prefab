@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 571212804638792501}
   - component: {fileID: 7941366949933761149}
   - component: {fileID: 5638276948368590234}
+  - component: {fileID: 1366679849}
   m_Layer: 12
   m_Name: Projectile
   m_TagString: Untagged
@@ -78,8 +79,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 7
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 0.05694356, b: 0, a: 1}
-  m_FlipX: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -209,7 +210,7 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.7, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
 --- !u!114 &7941366949933761149
@@ -226,6 +227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   damage: 25
+  animation: {fileID: 1366679849}
   rb: {fileID: 5638276948368590234}
 --- !u!50 &5638276948368590234
 Rigidbody2D:
@@ -248,3 +250,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!95 &1366679849
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8371480962004870576}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ddaa4c7fe55d46e448100ffed9a66f2c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

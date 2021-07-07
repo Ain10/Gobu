@@ -11,7 +11,7 @@ public class BossAttack : MonoBehaviour
     float attackTime;
     bool isAttackCD = false;
     Collider2D[] enemiesHit;
-
+    [SerializeField] new Animator animation;
     Transform target;
 
     void Start() 
@@ -22,6 +22,7 @@ public class BossAttack : MonoBehaviour
     void Update()
     {
         enemiesHit = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+        animation.SetInteger("Attack", enemiesHit.Length);
         // if(enemiesHit.Length == 0) transform.position += new Vector3((-1 * speed) * Time.deltaTime, 0,0)
         if(target != null)
         {
@@ -29,11 +30,11 @@ public class BossAttack : MonoBehaviour
             {
                 if (transform.position.x < target.position.x)
                 {
-                    transform.localScale = new Vector3(-4f, 4f, 1f);
+                    transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, 1f);
                 }
                 else
                 {
-                    transform.localScale = new Vector3(4f, 4f, 1f);
+                    transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, 1f);
                 }
                 transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
             }

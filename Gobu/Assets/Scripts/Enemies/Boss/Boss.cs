@@ -5,6 +5,7 @@ using UnityEngine;
 public class Boss : MonoBehaviour
 {
     public float maxHealth, maxMana, armor, currentHealth, currentMana;
+    [SerializeField] new Animator animation;
     
 
     // Start is called before the first frame update
@@ -44,6 +45,7 @@ public class Boss : MonoBehaviour
 
         if(currentHealth <= 0)
         {
+            animation.SetFloat("Health", currentHealth);
             Die();
         }
     }
@@ -52,6 +54,6 @@ public class Boss : MonoBehaviour
     {
         Debug.Log("Boss dies");
 
-        Destroy(gameObject);
+        Destroy(gameObject, 1f);
     }
 }

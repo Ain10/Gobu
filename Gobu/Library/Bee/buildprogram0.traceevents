@@ -1,16 +1,8 @@
 { "pid": "BuildProgram", "ph":"M", "name": "process_name", "args": {"name": "BuildProgram"} },
 { "pid": "BuildProgram", "ph":"M", "name": "process_sort_index", "args": {"sort_index": -1} },
 { "pid": "BuildProgram", "tid": 1, "ph":"M", "name": "thread_name", "args": {"name": ""} },
-<<<<<<< Updated upstream
-{ "pid": "BuildProgram", "tid": 1,"ts": 37415996537.1,"dur": 770226, "ph":"X", "name": "BuildProgram"},
-{ "pid": "BuildProgram", "tid": 1,"ts": 37415996748.5,"dur": 369264.3, "ph":"X", "name": "BuildProgramContextCCtor"},
-{ "pid": "BuildProgram", "tid": 1,"ts": 37416694400.3,"dur": 8900.1, "ph":"X", "name": "OutputData.Write"},
-{ "pid": "BuildProgram", "tid": 1,"ts": 37416703301.1,"dur": 63461.4, "ph":"X", "name": "Backend.Write"},
-{ "pid": "BuildProgram", "tid": 1,"ts": 37416704083.6,"dur": 47787.4, "ph":"X", "name": "JsonToString"},
-=======
-{ "pid": "BuildProgram", "tid": 1,"ts": 6638908063.3,"dur": 2154342.8, "ph":"X", "name": "BuildProgram"},
-{ "pid": "BuildProgram", "tid": 1,"ts": 6638909392.8,"dur": 953207.8, "ph":"X", "name": "BuildProgramContextCCtor"},
-{ "pid": "BuildProgram", "tid": 1,"ts": 6640763279.7,"dur": 54956.2, "ph":"X", "name": "OutputData.Write"},
-{ "pid": "BuildProgram", "tid": 1,"ts": 6640818238.8,"dur": 244165.6, "ph":"X", "name": "Backend.Write"},
-{ "pid": "BuildProgram", "tid": 1,"ts": 6640850383.6,"dur": 200849.6, "ph":"X", "name": "JsonToString"},
->>>>>>> Stashed changes
+{ "pid": "BuildProgram", "tid": 1,"ts": 38106898327.8,"dur": 314099.4, "ph":"X", "name": "BuildProgram"},
+{ "pid": "BuildProgram", "tid": 1,"ts": 38106898527.2,"dur": 80383.6, "ph":"X", "name": "BuildProgramContextCCtor"},
+{ "pid": "BuildProgram", "tid": 1,"ts": 38107157630.4,"dur": 3254.4, "ph":"X", "name": "OutputData.Write"},
+{ "pid": "BuildProgram", "tid": 1,"ts": 38107160885.3,"dur": 51541.4, "ph":"X", "name": "Backend.Write"},
+{ "pid": "BuildProgram", "tid": 1,"ts": 38107161600.1,"dur": 38877.9, "ph":"X", "name": "JsonToString"},

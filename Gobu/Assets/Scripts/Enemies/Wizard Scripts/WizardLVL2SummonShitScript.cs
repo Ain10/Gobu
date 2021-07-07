@@ -12,11 +12,12 @@ public class WizardLVL2SummonShitScript : MonoBehaviour
     float attackTime;
     public bool isAttackCD = false;
     Collider2D[] enemiesHit;
-
+    [SerializeField] new Animator animation;
     // Update is called once per frame
     void Update()
     {
         enemiesHit = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+        animation.SetInteger("Attack", enemiesHit.Length);
         if (enemiesHit.Length == 0) transform.position += new Vector3((-1 * speed) * Time.deltaTime, 0, 0);
         else if (enemiesHit.Length > 0 && !isAttackCD)
         {

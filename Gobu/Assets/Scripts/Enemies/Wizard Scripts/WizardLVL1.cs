@@ -9,13 +9,13 @@ public class WizardLVL1 : MonoBehaviour
     [SerializeField] Transform attackPoint;
     [SerializeField] public float fireDamage;
     bool done = false;
-    public float hitbox;
+    public Vector2 hitbox;
     Collider2D[] enemiesHit;
 
     // Update is called once per frame
     void Update()
     {
-        enemiesHit = Physics2D.OverlapCircleAll(attackPoint.position, hitbox, enemyLayers);
+        enemiesHit = Physics2D.OverlapBoxAll(attackPoint.position, hitbox, enemyLayers);
         Destroy(gameObject, 3f);
         if(enemiesHit.Length > 0 && done == false)
         {
@@ -46,6 +46,6 @@ public class WizardLVL1 : MonoBehaviour
     void OnDrawGizmosSelected()
     {
         if (attackPoint == null) return;
-        Gizmos.DrawWireSphere(attackPoint.position, hitbox);
+        Gizmos.DrawWireCube(attackPoint.position, hitbox);
     }
 }

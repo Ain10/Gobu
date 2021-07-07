@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9098004046317525307}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.58, y: -0.048, z: 0}
+  m_LocalPosition: {x: -1.7, y: -0.048, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -44,7 +44,8 @@ GameObject:
   - component: {fileID: 9098004046903083913}
   - component: {fileID: 9098004046903083917}
   - component: {fileID: 9098004046903083918}
-  - component: {fileID: 9098004046903083919}
+  - component: {fileID: 1245006717}
+  - component: {fileID: 55584427491448481}
   m_Layer: 7
   m_Name: Witch Lv. 02
   m_TagString: Minion
@@ -61,7 +62,7 @@ Transform:
   m_GameObject: {fileID: 9098004046903083912}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.11, y: -0.57, z: 0}
-  m_LocalScale: {x: 1.3288, y: 4.7262, z: 1}
+  m_LocalScale: {x: 1.8621, y: 1.8621, z: 1.8621}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9098004046317525308}
@@ -109,9 +110,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3625043607559282579, guid: 0d267bc78a0864eb48358689b29ed20a, type: 3}
-  m_Color: {r: 0, g: 0.33962262, b: 0.2156836, a: 1}
-  m_FlipX: 0
+  m_Sprite: {fileID: 21300000, guid: 2d61001c83859db4cbaa2f4545917ab8, type: 3}
+  m_Color: {r: 0.5059051, g: 0.017354928, b: 0.735849, a: 1}
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 2}
@@ -158,7 +159,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 0.5}
+    oldSize: {x: 1.43, y: 1.27}
     newSize: {x: 1, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -166,14 +167,14 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.0002036728, y: 0.25339139}
-      - {x: -0.5, y: 0.0027562492}
-      - {x: -0.5, y: -0.00036383048}
-      - {x: -0.009151664, y: -0.24754347}
-      - {x: 0.006464809, y: -0.24997635}
+    - - {x: -0.16048612, y: 0.13082315}
+      - {x: -0.27371988, y: -0.016100409}
+      - {x: -0.23600516, y: -0.1606453}
+      - {x: -0.1694341, y: -0.57753485}
+      - {x: 0.03474778, y: -0.58939594}
       - {x: 0.48561555, y: -0.006186234}
       - {x: 0.48201942, y: 0.007536415}
-      - {x: 0.0021930113, y: 0.25294653}
+      - {x: 0.0681907, y: 0.75264776}
 --- !u!114 &9098004046903083918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,9 +187,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d4c37384cebebe468abd78e70056abb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 80
-  armor: 12
---- !u!114 &9098004046903083919
+  maxHealth: 60
+  armor: 4
+  currentHealth: 0
+  animation: {fileID: 55584427491448481}
+--- !u!114 &1245006717
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -197,14 +200,35 @@ MonoBehaviour:
   m_GameObject: {fileID: 9098004046903083912}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aeaf59a3af900ff4abbc4fa68d4e158c, type: 3}
+  m_Script: {fileID: 11500000, guid: 8241b45fe3bc19a4cb6ff877b4218930, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   attackPoint: {fileID: 9098004046317525308}
   enemyLayers:
     serializedVersion: 2
-    m_Bits: 768
-  attackRange: 0.9
-  attackCD: 2.75
-  attackDamage: 30
-  speed: 1.8
+    m_Bits: 6400
+  summonUnit: {fileID: 4270670565720359270, guid: f8b99e28c6565b04aa748468a3e1ff8e, type: 3}
+  attackRange: 3.55
+  attackCD: 8
+  speed: 1.6
+  isAttackCD: 0
+  animation: {fileID: 55584427491448481}
+--- !u!95 &55584427491448481
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9098004046903083912}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 407fb19fe08685640b77c13297e2eee7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

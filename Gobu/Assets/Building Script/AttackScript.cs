@@ -12,6 +12,7 @@ public class AttackScript : MonoBehaviour
     [SerializeField] Transform Firepoint;
     private float attackTime=0;
     public bool isAttackCD;
+    [SerializeField] new Animator animation;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,12 +30,16 @@ public class AttackScript : MonoBehaviour
             {
                 if (enemyRange.collider.gameObject.tag == "Minion" || enemyRange.collider.gameObject.tag == "Boss")
                 {
+
                 if (isAttackCD == false)
                 {
-                    
+                    animation.SetBool("TargetFound", true);
                     attackTime = Time.time + AttackCD;
-                    
                     projAttack();
+                }
+                else
+                {
+                    animation.SetBool("TargetFound", false);
                 }
   
             } 
@@ -50,6 +55,7 @@ public class AttackScript : MonoBehaviour
     {
         Instantiate(projectile, Firepoint.position, Quaternion.identity);
         isAttackCD = true;
+        
     }
 
 
