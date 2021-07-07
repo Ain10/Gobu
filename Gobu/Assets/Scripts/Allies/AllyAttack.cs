@@ -11,15 +11,19 @@ public class AllyAttack : MonoBehaviour
     float attackTime;
     bool isAttackCD = false;
     Collider2D[] enemiesHit;
-
-
+    [SerializeField] Animator anim;
     // Update is called once per frame
     void Update()
     {
         enemiesHit = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, targetLayers);
-        if (enemiesHit.Length == 0) transform.position += new Vector3((1 * speed) * Time.deltaTime, 0, 0);
+        if (enemiesHit.Length == 0)
+        {
+            transform.position += new Vector3((1 * speed) * Time.deltaTime, 0, 0);
+            anim.SetInteger("Front", enemiesHit.Length);
+        }
         else if (enemiesHit.Length > 0 && !isAttackCD)
         {
+            anim.SetInteger("Front", enemiesHit.Length);
             attackTime = Time.time + attackCD;
             Attack(enemiesHit);
         }

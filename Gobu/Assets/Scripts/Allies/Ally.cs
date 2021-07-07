@@ -6,6 +6,7 @@ public class Ally : MonoBehaviour
 {
     public float maxHealth, armor;
     public float currentHealth;
+    [SerializeField] Animator animator;
 
     void Start()
     {
@@ -22,6 +23,7 @@ public class Ally : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+            animator.SetFloat("Dead", 0);
             Die();
         }
     }
@@ -38,6 +40,6 @@ public class Ally : MonoBehaviour
     {
         Debug.Log("Ally dies");
 
-        Destroy(gameObject);
+        Destroy(gameObject,0.9f);
     }
 }
