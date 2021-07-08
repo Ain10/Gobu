@@ -23,7 +23,11 @@ public class Ally : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+<<<<<<< Updated upstream
             animator.SetFloat("Dead", currentHealth);
+=======
+            animator.SetFloat("Dead", 0);
+>>>>>>> Stashed changes
             Die();
         }
     }

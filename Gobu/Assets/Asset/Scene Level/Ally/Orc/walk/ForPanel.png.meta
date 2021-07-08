@@ -95,12 +95,21 @@ TextureImporter:
       name: ForPanel_0
       rect:
         serializedVersion: 2
+<<<<<<< Updated upstream
         x: 226
         y: 195
         width: 172
         height: 147
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
+=======
+        x: 225
+        y: 163
+        width: 195
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+>>>>>>> Stashed changes
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
