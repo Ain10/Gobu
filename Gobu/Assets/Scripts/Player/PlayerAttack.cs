@@ -8,17 +8,18 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] Transform attackPoint;
     [SerializeField] float attackRange, attackCD, attackDamage, attackBufflast;
     [SerializeField] LayerMask enemyLayers;
-
-    float attackTime,bufftime;
+    [SerializeField] new Animator animation;
+    float attackTime, bufftime;
     bool isAttackCD = false;
     public bool attackBuffed = false;
-
+    
     // Update is called once per frame
     void Update()
     {
-
+        animation.SetBool("Attacked", Input.GetKeyDown(KeyCode.LeftShift));
         if (Input.GetKeyDown(KeyCode.LeftShift) && !isAttackCD)
         {
+            
             attackTime = Time.time + attackCD;
             Attack();
         }

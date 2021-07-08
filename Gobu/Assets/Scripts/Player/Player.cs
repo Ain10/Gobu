@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
 
     [SerializeField] float maxHealth, armor;
     public float currentHealth;
-
+    [SerializeField] new Animator animation;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +34,7 @@ public class Player : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+            animation.SetFloat("Health", currentHealth);
             Die();
         }
     }
@@ -42,7 +43,7 @@ public class Player : MonoBehaviour
     {
         Debug.Log(gameObject.name + " died!");
 
-        Destroy(gameObject);
+        Destroy(gameObject, 09f);
 
     }
 }

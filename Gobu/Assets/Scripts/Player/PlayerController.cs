@@ -11,11 +11,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] LayerMask groundLayer;
     const float groundCheckRadius = 0.2f;
     float xDir;
-
+    [SerializeField] new Animator animation;
     // Update is called once per frame
     void Update()
     {
         xDir = Input.GetAxisRaw("Horizontal");
+        animation.SetInteger("Moving", (int)Mathf.Abs(xDir));
         if (Input.GetButtonDown("Jump")) jump();
         
     }
@@ -48,8 +49,9 @@ public class PlayerController : MonoBehaviour
     // }
 
     void move(float direction){
-        if(direction == 1) transform.localScale = new Vector3(1.3f, 4.7f, 1f);
-        if (direction == -1) transform.localScale = new Vector3(-1.3f, 4.7f, 1f);
+        
+        if(direction == 1) transform.localScale = new Vector3((float)1.476249, (float)1.476249, 1f);
+        if (direction == -1) transform.localScale = new Vector3((float)-1.476249, (float)1.476249, 1f);
         if (isGrounded) speed = 5;
         else speed = 3;
         transform.position += new Vector3(direction * speed * Time.fixedDeltaTime, 0,0);

@@ -13,7 +13,7 @@ public class EnemyBaseScript : MonoBehaviour
     Collider2D[] enemiesHit;
     [SerializeField] float secondsBetweenSpawn = 0.7f;
     float nextSpawnTime = 3;
-    // Start is called before the first frame update
+    
     void Start()
     {
         
@@ -47,9 +47,11 @@ public class EnemyBaseScript : MonoBehaviour
         }
     }
 
+
     private void Die()
     {
-        //WinCondition Here
+        Destroy(gameObject);
+        Debug.Log("YOU WON");
     }
     void OnDrawGizmosSelected()
     {
